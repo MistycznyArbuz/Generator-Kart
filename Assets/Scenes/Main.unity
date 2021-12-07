@@ -339,7 +339,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 99384275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 409129484}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GenerateButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &99384275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,6 +821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd452c2081dd7e448be7da1fbbc732e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardGenerator: {fileID: 694170305}
   player: {fileID: 1065264214}
 --- !u!4 &409129485
 Transform:
@@ -973,7 +986,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardInformations: {fileID: 11400000, guid: 3cf9577897709e644818c4c081fdcafb, type: 2}
+  cardEffects:
+  - {fileID: 11400000, guid: c494b344857fac840b44baa71e1932f4, type: 2}
+  - {fileID: 11400000, guid: 41ea6aa0b210eb94b8db2223f193fd32, type: 2}
+  - {fileID: 11400000, guid: f98194276a40ac343a6706bf75391ba6, type: 2}
   cardPrefab: {fileID: 3000866573725686577, guid: 7db3aa074acb4814fbd08bc1fc074fef, type: 3}
+  actualCard: {fileID: 0}
   spawnPoint: {fileID: 1477712471}
 --- !u!4 &694170306
 Transform:
@@ -1255,7 +1273,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1338720667}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 409129484}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UseCard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1338720667
 MonoBehaviour:
   m_ObjectHideFlags: 0

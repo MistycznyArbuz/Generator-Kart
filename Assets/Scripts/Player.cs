@@ -7,7 +7,8 @@ using UnityEngine.UI;
 [System.Serializable]
 public class PlayerStats
 {
-    public int HP, Mana, AttackSpeed;
+    public int HP, Mana;
+    public float AttackSpeed;
 }
 
 public class Player : MonoBehaviour

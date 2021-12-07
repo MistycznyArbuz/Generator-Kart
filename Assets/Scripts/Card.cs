@@ -8,4 +8,6 @@ public class Card : MonoBehaviour
 {
     public TMP_Text title, descripton;
     public Image image;
+
+    public CardEffect cardEffect;
 }

@@ -24,3 +24,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
   - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
   - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
+  cardEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
