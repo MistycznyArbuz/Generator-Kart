@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardTitles:
   - Kostur Gandalfa
-  - 
-  - 
+  - Hartowana zbroja
+  - Miecz zniszczenia
   cardDescriptions:
-  - "Zwi\u0119ksza bazow\u0105 man\u0119 o 100%"
-  - 
-  - 
+  - "Zwi\u0119ksza bazow\u0105 man\u0119 o + 100%"
+  - "Zwi\u0119ksza bazowe HP o + 50%"
+  - "Zwi\u0119ksza bazow\u0105 pr\u0119dko\u015B\u0107 ataku o + 2"
   cardImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
+  - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
+  - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
