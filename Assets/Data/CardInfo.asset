@@ -12,19 +12,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc946448d84fbf040a3a5e60abf22416, type: 3}
   m_Name: CardInfo
   m_EditorClassIdentifier: 
-  cardTitles:
-  - Kostur Gandalfa
-  - Hartowana zbroja
+  weaponTitles:
   - Miecz zniszczenia
-  cardDescriptions:
-  - "Zwi\u0119ksza bazow\u0105 man\u0119 o + 100%"
-  - "Zwi\u0119ksza bazowe HP o + 50%"
-  - "Zwi\u0119ksza bazow\u0105 pr\u0119dko\u015B\u0107 ataku o + 2"
-  cardImages:
+  - Ostrze Gniewu
+  - "L\u015Bni\u0105cy miecz"
+  armorTitles:
+  - "Pancerz nieumar\u0142ego"
+  - "Zbroja \u015Bmia\u0142ka"
+  - "P\u0142aszcz nienawi\u015Bci"
+  weaponDescriptions:
+  - "Bonus do pr\u0119dko\u015Bci ataku"
+  - "Dodaje pr\u0119dko\u015B\u0107 ataku"
+  - "Dostajesz wi\u0119cej pr\u0119dko\u015Bci ataku"
+  armorDescriptions:
+  - "Prze\u017Cyjesz walk\u0119 d\u0142u\u017Cej"
+  - Polegniesz ostatni
+  - "Kawa\u0142 \u017Celastwa, b\u0119dzie ci ci\u0119\u017Cej ale jeste\u015B dobrze
+    chroniony"
+  magicTitles:
+  - Kostur Gandalfa
+  - "R\xF3\u017Cd\u017Cka zniszczenia"
+  - Kostur Gniewu
+  magicDescriptions:
+  - "Pot\u0119\u017Cna magia"
+  - "Pozwala rzuca\u0107 czary z 7 kr\u0119gu czar\xF3w"
+  - "Zwi\u0119kszy twoj\u0105 energi\u0119 (man\u0119)"
+  weaponImages:
+  - {fileID: 21300000, guid: 232d7a4377b96cd44806c383e9491ee4, type: 3}
+  - {fileID: 21300000, guid: 710552f9e0a94214b83b2fb578b4bad4, type: 3}
   - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
-  - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
-  - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
-  cardEffects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  armorImages:
+  - {fileID: 21300000, guid: 213ecccbbdf7eb94993feb0cc4ff2be0, type: 3}
+  - {fileID: 21300000, guid: 25166fcd86faee04fbc039d3ad62ce7e, type: 3}
+  - {fileID: 21300000, guid: ce3d0887c5fcdb44ba585eab4a54dc95, type: 3}
+  magicImages:
+  - {fileID: 21300000, guid: 680cf8774d1d0c04aadc4e351123a773, type: 3}
+  - {fileID: 21300000, guid: 3090ad54de64e7745b863372301b5b1e, type: 3}
+  - {fileID: 21300000, guid: a7276e660be02df43ba8c9d88a93ab20, type: 3}

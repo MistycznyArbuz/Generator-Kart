@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "CardInfo", menuName = "Data/CardInformations", order = 2)]
 public class CardInformations : ScriptableObject
 {
-    public string[] cardTitles, cardDescriptions;
-    public Sprite[] cardImages;
+    public string[] weaponTitles, armorTitles, weaponDescriptions, armorDescriptions, magicTitles, magicDescriptions;
+    public Sprite[] weaponImages, armorImages, magicImages;
 }
 

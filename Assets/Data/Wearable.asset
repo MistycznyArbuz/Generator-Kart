@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea9311ff43870aa449082354b9cb8982, type: 3}
-  m_Name: Buff
+  m_Name: Wearable
   m_EditorClassIdentifier: Assembly-CSharp::CardEffect
   type: 1
   hp: 0
   mana: 0
-  attackSpeed: 2
+  attackSpeed: 0
