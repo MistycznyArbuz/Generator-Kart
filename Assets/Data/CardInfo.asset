@@ -42,10 +42,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 710552f9e0a94214b83b2fb578b4bad4, type: 3}
   - {fileID: 21300000, guid: fbc8d27342f20f5438ccea7fc1d918b3, type: 3}
   armorImages:
-  - {fileID: 21300000, guid: 213ecccbbdf7eb94993feb0cc4ff2be0, type: 3}
+  - {fileID: 21300000, guid: 3008c61de4d0a154d8899237f005f345, type: 3}
   - {fileID: 21300000, guid: 25166fcd86faee04fbc039d3ad62ce7e, type: 3}
   - {fileID: 21300000, guid: ce3d0887c5fcdb44ba585eab4a54dc95, type: 3}
   magicImages:
-  - {fileID: 21300000, guid: 680cf8774d1d0c04aadc4e351123a773, type: 3}
+  - {fileID: 21300000, guid: 891d634871c551a4a91ef971e7921194, type: 3}
   - {fileID: 21300000, guid: 3090ad54de64e7745b863372301b5b1e, type: 3}
   - {fileID: 21300000, guid: a7276e660be02df43ba8c9d88a93ab20, type: 3}
