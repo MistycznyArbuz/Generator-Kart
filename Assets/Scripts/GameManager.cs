@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using System.Runtime.Serialization.Formatters.Binary;
 
 public class GameManager : MonoBehaviour
