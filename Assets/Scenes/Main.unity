@@ -839,6 +839,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardGenerator: {fileID: 694170305}
   player: {fileID: 1065264214}
+  path: 
+  json: 
+  savetest:
+    title: 
+    description: 
+    image: {fileID: 0}
+    cardEffect: {fileID: 0}
 --- !u!4 &409129485
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,6 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1adeb37fa81f4cd47b178426c8c9fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 409129484}
   cardInformations: {fileID: 11400000, guid: 3cf9577897709e644818c4c081fdcafb, type: 2}
   cardEffects:
   - {fileID: 11400000, guid: c494b344857fac840b44baa71e1932f4, type: 2}
@@ -1747,6 +1755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1477712471}
     m_Modifications:
+    - target: {fileID: 2231427364580965899, guid: 7db3aa074acb4814fbd08bc1fc074fef, type: 3}
+      propertyPath: cardEffect
+      value: 
+      objectReference: {fileID: 11400000, guid: 96fcb7951706fe147911e0924817c3de, type: 2}
     - target: {fileID: 3000866573725686542, guid: 7db3aa074acb4814fbd08bc1fc074fef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

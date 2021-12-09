@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CardGenerator : MonoBehaviour
 {
+    public GameManager gameManager;
     public CardInformations cardInformations;
     public CardEffect[] cardEffects;
     public GameObject cardPrefab;
@@ -45,5 +46,7 @@ public class CardGenerator : MonoBehaviour
             actualCard.GetComponent<Card>().image.sprite = cardInformations.magicImages[Random.Range(0, cardInformations.magicImages.Length)];
             actualCard.GetComponent<Card>().cardEffect.mana += Random.Range(5, 20);
         }
+
+        //gameManager.SaveToFile();
     }
 }

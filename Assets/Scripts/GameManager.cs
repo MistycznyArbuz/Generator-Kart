@@ -10,15 +10,14 @@ public class GameManager : MonoBehaviour
     public CardGenerator cardGenerator;
     public GameObject player;
 
-    string path, json;
+    public string path, json;
 
-    private void Awake()
+    public Save savetest;
+
+    private void Start()
     {
         //Ustawienie ścieżki
         path = Application.persistentDataPath;
-
-        //Wczytanie gry przy starcie
-        LoadGame();
     }
 
     public void GenerateButton()
@@ -33,15 +32,15 @@ public class GameManager : MonoBehaviour
 
         Texture2D texture = sprite.texture;
 
-        byte[] imageBytes = texture.EncodeToPNG();
+        byte[] imageBytes = texture.GetRawTextureData();
 
-        File.WriteAllBytes(Application.persistentDataPath, imageBytes);
+        File.WriteAllBytes(Application.persistentDataPath + "/Image.png", imageBytes);
     }
 
     public Sprite LoadImage()
     {
         //Odwrotna wersja SaveImage()
-        byte[] imageBytes = File.ReadAllBytes(Application.persistentDataPath);
+        byte[] imageBytes = File.ReadAllBytes(Application.persistentDataPath + "/Image.png");
 
         Texture2D texture = null;
 
@@ -59,7 +58,7 @@ public class GameManager : MonoBehaviour
         save.title = cardGenerator.actualCard.title.text;
         save.description = cardGenerator.actualCard.descripton.text;
 
-        //SaveImage(save);
+        SaveImage(save);
 
         save.cardEffect = cardGenerator.actualCard.cardEffect;
 
@@ -73,17 +72,23 @@ public class GameManager : MonoBehaviour
 
         json = JsonUtility.ToJson(save);
 
+        File.WriteAllText(path + "/gamesave.json", json);
+
         Debug.Log("Gra zapisana");
     }
 
     public void LoadGame()
     {
-        Save save = JsonUtility.FromJson<Save>(json);
+        json = File.ReadAllText(path + "/gamesave.json");
 
-        cardGenerator.actualCard.title.text = save.title;
-        cardGenerator.actualCard.descripton.text = save.description;
-        cardGenerator.actualCard.image.sprite = save.image;
-        cardGenerator.actualCard.cardEffect = save.cardEffect;
+        savetest = new Save();
+
+        savetest = JsonUtility.FromJson<Save>(json);
+
+        cardGenerator.actualCard.title.text = savetest.title;
+        cardGenerator.actualCard.descripton.text = savetest.description;
+        cardGenerator.actualCard.image.sprite = savetest.image;
+        cardGenerator.actualCard.cardEffect = savetest.cardEffect;
 
         Debug.Log("Gra wczytana");
     }
