@@ -6,7 +6,9 @@ using UnityEngine.Events;
 
 public class GameEvents : MonoBehaviour
 {
+    public static GameManager gameManager;
     public static CardGenerator cardGenerator;
+    public static CardInformations cardInformations;
 
     public delegate void GUIEvent();
     public static event GUIEvent OnGenerateClicked;
@@ -31,5 +33,15 @@ public class GameEvents : MonoBehaviour
     public static CardGenerator GiveCardGenerator()
     {
         return cardGenerator;
+    }
+
+    public static GameManager GiveGameManager()
+    {
+        return gameManager;
+    }
+
+    public static CardInformations GiveCardInformations()
+    {
+        return cardInformations;
     }
 }

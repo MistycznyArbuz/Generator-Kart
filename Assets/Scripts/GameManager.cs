@@ -64,13 +64,27 @@ public class GameManager : MonoBehaviour
         Save save = new Save();
 
         //Zapisuje dane do instancji zapisu
-        save.title = cardGenerator.actualCard.title.text;
-        save.description = cardGenerator.actualCard.descripton.text;
+        save.title = cardGenerator.actualCard.title;
+        save.description = cardGenerator.actualCard.descripton;
 
         //Zapisuje również zdjęcie
         SaveImage(save);
 
-        save.cardEffect = cardGenerator.actualCard.cardEffect;
+        if (cardGenerator.actualCard.cardEffect.type == CardEffect.CardType.Weapon)
+        {
+            save.type = "weapon";
+            save.effectValue = cardGenerator.actualCard.cardEffect.attackSpeed;
+        }
+        else if (cardGenerator.actualCard.cardEffect.type == CardEffect.CardType.Armor)
+        {
+            save.type = "wearable";
+            save.effectValue = cardGenerator.actualCard.cardEffect.hp;
+        }
+        else
+        {
+            save.type = "magic";
+            save.effectValue = cardGenerator.actualCard.cardEffect.mana;
+        }
 
         //zwracam gotowy zapis
         return save;
@@ -93,10 +107,32 @@ public class GameManager : MonoBehaviour
             Save save = new Save();
             save = JsonUtility.FromJson<Save>(json);
 
-            cardGenerator.actualCard.title.text = save.title;
-            cardGenerator.actualCard.descripton.text = save.description;
+            cardGenerator.actualCard.title = save.title;
+            cardGenerator.actualCard.descripton = save.description;
             cardGenerator.actualCard.image.sprite = LoadImage();
-            cardGenerator.actualCard.cardEffect = save.cardEffect;
+
+            CardEffect effect = new CardEffect();
+
+            cardGenerator.actualCard.cardEffect = effect;
+
+            if (save.type == "weapon")
+            {
+                cardGenerator.actualCard.cardEffect = effect;
+                effect.type = CardEffect.CardType.Weapon;
+                effect.attackSpeed = (int)save.effectValue;
+            }
+            else if (save.type == "wearable")
+            {
+                cardGenerator.actualCard.cardEffect = effect;
+                effect.type = CardEffect.CardType.Armor;
+                effect.hp = (int)save.effectValue;
+            }
+            else
+            {
+                cardGenerator.actualCard.cardEffect = effect;
+                effect.type = CardEffect.CardType.Magic;
+                effect.mana = (int)save.effectValue;
+            }
 
             Debug.Log("Gra wczytana");
         }
@@ -119,7 +155,7 @@ public class GameManager : MonoBehaviour
     [System.Serializable]
     public class Save
     {
-        public string title, description;
-        public CardEffect cardEffect;
+        public string title, description, type;
+        public float effectValue;
     }
 }
